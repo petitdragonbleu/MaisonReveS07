@@ -1,0 +1,68 @@
+@model MaisonReve.Database.Models.Building
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>@SharedLocals["Create"]</h1>
+
+<h4>
+    @SharedLocals["Building"]</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Address" class="control-label"></label>
+                <textarea asp-for="Address" class="form-control"></textarea>
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PhoneNumber" class="control-label"></label>
+                <input asp-for="PhoneNumber" class="form-control" />
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OwnerFirstName" class="control-label"></label>
+                <input asp-for="OwnerFirstName" class="form-control" />
+                <span asp-validation-for="OwnerFirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OwnerLastName" class="control-label"></label>
+                <input asp-for="OwnerLastName" class="form-control" />
+                <span asp-validation-for="OwnerLastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <textarea asp-for="Description" class="form-control"></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Published" /> @Html.DisplayNameFor(model => model.Published)
+                </label>
+            </div>
+            <partial name="_CreateAndBackToListButton">
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+<script src="https://cdn.tiny.cloud/1/3i7r4goi9sc59u7p3omjz5np04d388hwiav0d33b0pd217y9/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+<script>
+    tinymce.init({
+        selector: 'textarea',
+        plugins: 'lists',
+        menubar: 'file edit format'
+    });
+
+    </script>
+}

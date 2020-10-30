@@ -1,0 +1,9 @@
+C:\3w6\S01\CEM.A20._3w6.MaisonReve.S01\MaisonReve.Database\bin\Debug\net5.0\MaisonReve.Database.deps.json
+C:\3w6\S01\CEM.A20._3w6.MaisonReve.S01\MaisonReve.Database\bin\Debug\net5.0\MaisonReve.Database.dll
+C:\3w6\S01\CEM.A20._3w6.MaisonReve.S01\MaisonReve.Database\bin\Debug\net5.0\MaisonReve.Database.pdb
+C:\3w6\S01\CEM.A20._3w6.MaisonReve.S01\MaisonReve.Database\obj\Debug\net5.0\MaisonReve.Database.csprojAssemblyReference.cache
+C:\3w6\S01\CEM.A20._3w6.MaisonReve.S01\MaisonReve.Database\obj\Debug\net5.0\MaisonReve.Database.AssemblyInfoInputs.cache
+C:\3w6\S01\CEM.A20._3w6.MaisonReve.S01\MaisonReve.Database\obj\Debug\net5.0\MaisonReve.Database.AssemblyInfo.cs
+C:\3w6\S01\CEM.A20._3w6.MaisonReve.S01\MaisonReve.Database\obj\Debug\net5.0\MaisonReve.Database.csproj.CoreCompileInputs.cache
+C:\3w6\S01\CEM.A20._3w6.MaisonReve.S01\MaisonReve.Database\obj\Debug\net5.0\MaisonReve.Database.dll
+C:\3w6\S01\CEM.A20._3w6.MaisonReve.S01\MaisonReve.Database\obj\Debug\net5.0\MaisonReve.Database.pdb

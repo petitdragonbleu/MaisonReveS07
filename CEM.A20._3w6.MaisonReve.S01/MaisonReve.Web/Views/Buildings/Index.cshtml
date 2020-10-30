@@ -1,0 +1,83 @@
+@model IEnumerable<MaisonReve.Database.Models.Building>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>@SharedLocals["Index"]</h1>
+
+<p>
+    <a class="btn btn-primary" asp-action="Create"><i class="fas fa-plus-circle"></i> @SharedLocals["Create"]</a></p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhoneNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OwnerFirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OwnerLastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Published)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OwnerFirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OwnerLastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td class="text-nowrap">
+                @if(!item.Published && item.RentingLot.Any()){
+
+                <a class="btn btn-primary" asp-action="Publish" asp-route-id="@item.Id">
+                    @SharedLocals["Published"]</a>
+
+                }
+                @if(item.Published)
+                           {
+
+
+                                <span><a class="btn btn-danger" asp-action="Unpublish" asp-route-id="@item.Id">
+                                @SharedLocals["Unpublished"]</a></span>
+                    }
+
+</td>
+            <td class="text-nowrap">
+                <a  class =" btn btn-success " asp-action="Edit" asp-route-id="@item.Id"> <i class="far fa-edit" alt ="Edit"></i> @SharedLocals["Edit"]</a> |
+                <a class ="btn btn-info" asp-action="Details" asp-route-id="@item.Id"> <i class="fas fa-info-circle" alt ="Info"></i> @SharedLocals["Details"]</a> |
+                <a class = "btn btn-danger" asp-action="Delete" asp-route-id="@item.Id"> <i class="fas fa-trash" alt =" Delete"></i> @SharedLocals["Delete"]</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
